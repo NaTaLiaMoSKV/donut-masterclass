@@ -1,2 +1,13 @@
-@import './common';
-@import './example';
+@import './base/base';
+
+@import './layout/header';
+@import './layout/about';
+@import './layout/program';
+@import './layout/speakers';
+@import './layout/price';
+@import './layout/reviews';
+@import './layout/registration';
+@import './layout/contact';
+@import './layout/footer';
+
+@import './utils/variables';
