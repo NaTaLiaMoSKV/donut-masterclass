@@ -1,0 +1,23 @@
+<section class="mobile-menu">
+    <container class="mobile-menu__container">
+        <picture class="logo-picture">
+            <source srcset="./images/logo-tablet.png, ./images/logo-tablet@2x.png 2x" media="(min-width: 768px)" />
+            <source srcset="./images/logo-mobile.png, ./images/logo-mobile@2x.png 2x" media="(max-width: 767px)" />
+            <img src="./images/logo-mobile.png" alt="Donut Masterclass" />
+        </picture>
+        <button class="mobile-menu__button mobile-menu__button--close js-close-menu" type="button" aria-label="Mobile menu button"
+            aria-controls="mobile-menu">
+            <svg width="32" height="32" class="mobile-menu__icon mobile-menu__icon--close">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+        </button>
+        <ul class="nav-menu mobile-menu__nav-menu">
+            <li class="nav-menu__item">About us</li>
+            <li class="nav-menu__item">Program</li>
+            <li class="nav-menu__item">Speakers</li>
+            <li class="nav-menu__item">Price</li>
+            <li class="nav-menu__item">Reviews</li>
+            <li class="nav-menu__item">Contacts</li>
+        </ul>
+    </container>
+</section>
