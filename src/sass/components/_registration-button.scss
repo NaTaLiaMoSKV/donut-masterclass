@@ -5,7 +5,11 @@
     border-radius: 30px;
     font-weight: 400;
     font-size: 18px;
-    color: #fff;
+    color: var(--white-color);
     background-color: var(--content-pink-color);
     filter: drop-shadow(10px 15px 25px rgba(232, 183, 183, 0.45));
+}
+
+.registration-button a {
+    color: var(--white-color);
 }
