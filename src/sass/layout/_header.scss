@@ -1,21 +1,11 @@
 .header {
-    background-image: url("../images/header-mobile.jpg");
+    background-image: url("../images/header-tablet.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-.header__container {
-    width: calc(100% - 40px);
-    padding: 0;
-    margin-right: auto;
-    margin-left: auto;
+    background-position: top center;
 }
 
 .header__navigation {
     padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
     display: flex;
     justify-content: space-between;
 }
@@ -60,13 +50,6 @@
     margin-bottom: 8px;
 }
 
-@media screen and (min-width: 480px) {
-    
-    .header__container {
-        width: 440px;
-    }
-}
-
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
 screen and (min-resolution: 192dpi) and (min-width: 320px),
 screen and (min-resolution: 2dppx) and (min-width: 320px) {
@@ -76,8 +59,20 @@ screen and (min-resolution: 2dppx) and (min-width: 320px) {
     }
 }
 
+@media screen and (min-width:480px) and (max-width:767px) {
+
+    .header {
+       width: 480px;
+    }
+}
 
 @media screen and (max-width: 767px) {
+
+    .header {
+        background-size: cover;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .header__title {
         text-align: center;
@@ -94,15 +89,11 @@ screen and (min-resolution: 2dppx) and (min-width: 320px) {
 
     .header {
         background-image: url("../images/header-tablet.jpg");
-    }
-
-    .header__container {
-        width: 704px;
+        background-size: contain;
     }
 
     .header__navigation {
         padding-top: 25px;
-        padding-left: 32px;
     }
 
     .header__logo-picture {
@@ -111,7 +102,6 @@ screen and (min-resolution: 2dppx) and (min-width: 320px) {
     
     .header__main-info {
         align-items: flex-start;
-        padding-left: 32px;
     }
 
     .header__title {
@@ -146,14 +136,9 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
 
     .header {
         background-image: url("../images/header-desktop.jpg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 100%;
     }
 
     .header__navigation {
-        padding-left: 16px;
         padding-top: 35px;
         justify-content: flex-start;
     }
@@ -193,10 +178,6 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
 
     .mobile-menu__button {
         display: none;
-    }
-
-    .header__main-info {
-        padding-left: 16px;
     }
 
     .header__title {
