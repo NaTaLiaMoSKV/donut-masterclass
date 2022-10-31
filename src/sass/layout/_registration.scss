@@ -1,0 +1,232 @@
+.registration {
+    margin-bottom: 40px;
+}
+
+.registration__title {
+    margin-bottom: 27px;
+}
+
+.registration__main-info {
+    width: 100%;
+    padding-bottom: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border-bottom: 1px solid var(--white-color);
+    color: var(--white-color);
+}
+
+.registration__main-info p {
+    width: 144px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+    color: var(--white-color);
+}
+
+.registraion-form__title {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.registration-form__input {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    border-bottom: 1px solid var(--white-color);
+    background: transparent;
+    color: var(--white-color);
+
+    &::placeholder {
+        color: var(--white-color);
+    }
+
+    &:placeholder-shown:required {
+        border-color: var(--white-color);
+    }
+
+    &:valid {
+        border-color: var(--white-color);
+    }
+
+    &:invalid {
+        border-color: red;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    .registration__bloc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 40px 8px 32px;
+        width: 280px;
+        height: 394px;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url("../images/registration-donuts-img2-mobile.jpg");
+        border-radius: 10px;
+        box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .registration__picture {
+        display: none;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .registration {
+        margin-bottom: 68px;
+    }
+    
+    .registration__bloc {
+        height: 246px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-image: url("../images/registration-rect-tablet.png"),
+        url("../images/registration-donuts-img2-tablet.png");
+        border-radius: 10px;
+        box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: left, right;
+    }
+
+    .registration__picture img {
+        position: absolute;
+        width: 100px;
+        bottom: 20px;
+        left: 23px;
+    }
+
+    .registration__main-info {
+        position: relative;
+        width: 90px;
+        margin-left: 62px;
+        margin-right: 32px;
+        border: none;
+        color: var(--content-black-color);
+        
+        &::after {
+            content: "";
+            position: absolute;
+            height: 154px;
+            top: -40%;
+            left: 120px;
+            border-right: 1px solid rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .registration__main-info p {
+        width: 90px;
+        text-align: end;
+    }
+
+    .registration-form {
+        margin-left: 25px;
+        align-items: flex-start;
+    }
+
+    .registraion-form__title {
+        width: 283px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: start;
+        color: var(--black-color);
+    }
+
+    .registration-form__input {
+        width: 237px;
+        margin-top: 16px;
+        border-bottom: 1px solid var(--black-color);
+        
+        &::placeholder {
+            color: var(--black-color);
+        }
+    
+        &:placeholder-shown:required {
+            border-color: var(--black-color);
+        }
+    
+        &:valid {
+            border-color: var(--black-color);
+        }
+    
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+
+    .registration {
+        margin-bottom: 125px;
+    }
+
+    .registration__bloc {
+        background-image: url("../images/registration-rect-desktop.png"),
+            url("../images/registration-donuts-img2-desktop.png");
+    }
+
+    .registration__picture img {
+        position: absolute;
+        width: 200px;
+        bottom: 16px;
+        left: 15px;
+    }
+
+    .registration__main-info {
+        width: 127px;
+        margin-left: 213px;
+
+        &::after {
+            height: 166px;
+            top: -70%;
+            left: 150px;
+            border-right: 1px solid #2E2520;
+        }
+    }
+
+    .registration__main-info p {
+        width: 127px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .registration-form {
+        margin-left: 28px;
+    }
+
+    .registraion-form__title {
+        width: 267px;
+        margin-bottom: 24px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .registration-form__input {
+        margin-bottom: 16px;
+        margin-top: 0;
+        border-bottom: 1px solid var(--black-color);
+    }
+
+}

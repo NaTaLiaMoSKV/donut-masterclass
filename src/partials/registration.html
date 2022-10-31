@@ -1,24 +1,26 @@
 <section id="registration" class="registration">
     <div class="container registration__container">
-        <h2 class="section-title">Registration</h2>
-        <div class="registration__div">
-            <p class="registration__main-info">May 23, 11:00
-            New York</p>
+        <h2 class="section-title registration__title">Registration</h2>
+        <div class="registration__bloc">
+            <picture class="registration__picture">
+            <source srcset="./images/registration-donuts-img1-desktop.png, ./images/registration-donuts-img1-desktop@2x.png 2x"
+                media="(min-width: 1200px)" />
+            <source srcset="./images/registration-donuts-img1-tablet.png, ./images/registration-donuts-img1-tablet@2x.png 2x" media="(min-width: 768px)" />
+            <img src="./images/registration-donuts-img1-tablet.png" alt="donuts" />
+            </picture>
+            <div class="registration__main-info">
+                <p class="registration__date-info">May 23, 11:00</p>
+                <p class="registration__place-info">New York</p>
+            </div>
             <form class="registration-form">
                 <h3 class="registraion-form__title">Apply your personal info
                 for registration</h3>
-                <label class="registration-form__label">
-                        <input type="text" class="registration-form__input" name="name" pattern="[a-zA-Zа-яА-яІіЇї]+"
+                <input type="text" class="registration-form__input" name="name" pattern="[a-zA-Zа-яА-яІіЇї]+"
                             placeholder="Your name" minlength="3" maxlength="30" required />
-                </label>
-                <label class="registration-form__label">
                         <input class="registration-form__input" type="tel" name="tel" pattern="[0-9]{10}" placeholder="Phone number" required />
-                </label>
-                <label class="registration-form__label">
                     <input class="registration-form__input" type="email" name="email" placeholder="Email" required />
-                </label>
             </form>
-            <button type="button" class="registration-button">Register</button>
+            <button type="submit" class="registration-button">Register</button>
         </div>
     </div>
 </section>
