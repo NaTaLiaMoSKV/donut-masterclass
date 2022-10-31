@@ -13,14 +13,16 @@
                 <p class="registration__place-info">New York</p>
             </div>
             <form class="registration-form">
-                <h3 class="registraion-form__title">Apply your personal info
-                for registration</h3>
-                <input type="text" class="registration-form__input" name="name" pattern="[a-zA-Zа-яА-яІіЇї]+"
-                            placeholder="Your name" minlength="3" maxlength="30" required />
-                        <input class="registration-form__input" type="tel" name="tel" pattern="[0-9]{10}" placeholder="Phone number" required />
+                <div class="registration-form__inputs">
+                    <h3 class="registraion-form__title">Apply your personal info
+                        for registration</h3>
+                    <input type="text" class="registration-form__input" name="name" pattern="[a-zA-Zа-яА-яІіЇї]+" placeholder="Your name" minlength="3" maxlength="30" required />
+                    <input class="registration-form__input" type="tel" name="tel" pattern="[0-9]{10}" placeholder="Phone number" required />
                     <input class="registration-form__input" type="email" name="email" placeholder="Email" required />
+                </div>
+                <button type="submit" class="registration-button">Register</button>
             </form>
-            <button type="submit" class="registration-button">Register</button>
+            
         </div>
     </div>
 </section>

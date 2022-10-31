@@ -1048,20 +1048,16 @@ a:hover, a:focus {
   margin-left: auto;
 }
 
-.registration-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 32px;
-  color: var(--white-color);
-}
-
 .registraion-form__title {
   margin-top: 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+}
+
+.registration-form__inputs {
+  margin-bottom: 32px;
 }
 
 .registration-form__input {
@@ -1115,6 +1111,13 @@ a:hover, a:focus {
     background-repeat: no-repeat;
     background-size: contain;
   }
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+    color: var(--white-color);
+  }
   .registration__picture {
     display: none;
   }
@@ -1163,7 +1166,13 @@ a:hover, a:focus {
   }
   .registration-form {
     margin-left: 25px;
-    align-items: flex-start;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .registration-form__inputs {
+    width: 240px;
+    margin-right: 75px;
   }
   .registraion-form__title {
     width: 283px;
@@ -1176,6 +1185,7 @@ a:hover, a:focus {
     width: 237px;
     margin-top: 16px;
     border-bottom: 1px solid var(--black-color);
+    color: var(--black-color);
   }
   .registration-form__input::-moz-placeholder {
     color: var(--black-color);
@@ -1230,8 +1240,13 @@ a:hover, a:focus {
   .registration-form {
     margin-left: 28px;
   }
+  .registration-form__inputs {
+    width: 270px;
+    margin-right: 0;
+  }
   .registraion-form__title {
     width: 267px;
+    margin-top: 40px;
     margin-bottom: 24px;
     font-weight: 500;
     font-size: 20px;
