@@ -1,23 +1,27 @@
-<section class="mobile-menu">
+<section class="mobile-menu js-menu-container">
     <div class="container mobile-menu__container">
-        <picture class="logo-picture">
-            <source srcset="./images/logo-tablet.png, ./images/logo-tablet@2x.png 2x" media="(min-width: 768px)" />
-            <source srcset="./images/logo-mobile.png, ./images/logo-mobile@2x.png 2x" media="(max-width: 767px)" />
-            <img src="./images/logo-mobile.png" alt="Donut Masterclass" />
-        </picture>
-        <button class="mobile-menu__button mobile-menu__button--close js-close-menu" type="button" aria-label="Mobile menu button"
-            aria-controls="mobile-menu">
-            <svg width="32" height="32" class="mobile-menu__icon mobile-menu__icon--close">
-                <use href="./images/symbol-defs.svg#icon-close"></use>
-            </svg>
-        </button>
-        <ul class="nav-menu mobile-menu__nav-menu">
-            <li class="nav-menu__item">About us</li>
-            <li class="nav-menu__item">Program</li>
-            <li class="nav-menu__item">Speakers</li>
-            <li class="nav-menu__item">Price</li>
-            <li class="nav-menu__item">Reviews</li>
-            <li class="nav-menu__item">Contacts</li>
+        <div class="mobile-menu__header">
+            <h1 class="header-menu__title header-menu__title--hidden">Mobile menu</h1>
+            <picture class="logo-picture">
+                <source srcset="./images/logo-tablet.png, ./images/logo-tablet@2x.png 2x" media="(min-width: 768px)" />
+                <source srcset="./images/logo-mobile.png, ./images/logo-mobile@2x.png 2x" media="(max-width: 767px)" />
+                <img src="./images/logo-mobile.png" alt="Donut Masterclass" />
+            </picture>
+            <button class="mobile-menu__button mobile-menu__button--close js-close-menu1" type="button"
+                aria-label="Mobile menu button" aria-controls="mobile-menu">
+                <svg width="32" height="32" class="mobile-menu__icon mobile-menu__icon--close">
+                    <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+        
+        <ul class="mobile-menu__list">
+            <li class="mobile-menu__item"><a class="mobile-menu__link js-close-menu2" href="#about">About us</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link js-close-menu3" href="#program">Program</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link js-close-menu4" href="#speakers">Speakers</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link js-close-menu5" href="#price">Price</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link js-close-menu6" href="#reviews">Reviews</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link js-close-menu7" href="#contact">Contacts</a></li>
         </ul>
     </div>
 </section>
