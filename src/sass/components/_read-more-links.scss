@@ -1,0 +1,26 @@
+.read-more-link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--content-black-color);
+    margin-right: auto;
+}
+
+.read-more-link--close {
+    display: none;
+}
+
+@media screen and(min-width:768px) {
+
+    .read-more-link {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media screen and(min-width:1200px) {
+
+    .read-more-link {
+        display: none;
+    }
+}

@@ -18,23 +18,11 @@
     margin-bottom: 10px;
 }
 
-.about__additional-text {
-    display: none;
-}
-
-.about__description a {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
-    color: var(--content-black-color);
-    margin-right: auto;
-}
-
-.less-link {
-    display: none;
-}
-
 @media screen and(max-width:767px) {
+
+    .about {
+        margin-bottom: 18px;
+    }
 
     .about__title {
         margin-bottom: 8px; 
@@ -51,7 +39,7 @@
     .about__container {
         display: flex;
         justify-content: space-between;
-        padding-bottom: 30px;
+        padding-bottom: 0;
         padding-top: 35px;
     }
 
@@ -77,22 +65,17 @@
 
 @media screen and(min-width:1200px) {
 
+    .about {
+        margin-bottom: 100px;
+    }
+
     .about__container {
-        padding-bottom: 0;
         padding-top: 65px;
     }
 
     .about__picture img,
     .about__description {
         width: 570px;
-    }
-
-    .about__description a {
-        display: none;
-    }
-
-    .about__additional-text {
-        display: block;
     }
 
 }

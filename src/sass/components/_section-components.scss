@@ -10,6 +10,10 @@
     line-height: 20px;
 }
 
+.section-text--hidden {
+    display: none;
+}
+
 @media screen and(min-width: 768px) {
 
     .section-title{
@@ -18,9 +22,17 @@
         margin-bottom: 28px;
     }
 
+}
+
+
+@media screen and(min-width: 1200px) {
+    
+    .section-text--hidden {
+        display: block;
+    }
+
     .section-text {
         font-size: 18px;
         line-height: 22px;
     }
-    
 }
