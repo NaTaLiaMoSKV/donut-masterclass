@@ -1335,4 +1335,44 @@ a:hover, a:focus {
 .contact-form__input {
     width: 394px;
   }
+}
+.footer__container ul {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer__info {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__phone,
+.footer__location {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer__tel-link {
+  color: var(--content-black-color);
+}
+
+.footer__picture img {
+  margin: 0px auto 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__info {
+    margin-top: 80px;
+  }
+  .footer__icon,
+.footer__picture {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__info {
+    margin-top: 100px;
+  }
 }/*# sourceMappingURL=main.css.map */
