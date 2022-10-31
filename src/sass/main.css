@@ -150,6 +150,7 @@ a:hover, a:focus {
   --white-links-color: #FCFCFC;
   --bg-color: #E5E2E3;
   --price-card-bg-color: #FAFBFB;
+  --contact-input-gray-color: rgba(0, 0, 0, 0.5);
   --speakers-bg-pink-color: rgba(243, 132, 140, 0.29);
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1256,5 +1257,82 @@ a:hover, a:focus {
     margin-bottom: 16px;
     margin-top: 0;
     border-bottom: 1px solid var(--black-color);
+  }
+}
+.contact {
+  margin-bottom: 28px;
+}
+
+.contact__title {
+  margin-bottom: 27px;
+}
+
+.contact__container p {
+  text-align: center;
+}
+
+.contact-form {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form__input {
+  width: 280px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid var(--black-color);
+  color: var(--contact-input-gray-color);
+}
+.contact-form__input::-moz-placeholder {
+  color: var(--contact-input-gray-color);
+}
+.contact-form__input:-ms-input-placeholder {
+  color: var(--contact-input-gray-color);
+}
+.contact-form__input::placeholder {
+  color: var(--contact-input-gray-color);
+}
+.contact-form__input:-moz-placeholder-shown:required {
+  border-color: var(--contact-input-gray-color);
+}
+.contact-form__input:-ms-input-placeholder:required {
+  border-color: var(--contact-input-gray-color);
+}
+.contact-form__input:placeholder-shown:required {
+  border-color: var(--contact-input-gray-color);
+}
+.contact-form__input:valid {
+  border-color: var(--contact-input-gray-color);
+}
+.contact-form__input:invalid {
+  border-color: red;
+}
+
+.contact-form button {
+  margin-top: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    margin-bottom: 31px;
+  }
+  .contact__container,
+.contact-form__input {
+    width: 336px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    margin-bottom: 37px;
+  }
+  .contact__container,
+.contact-form__input {
+    width: 394px;
   }
 }/*# sourceMappingURL=main.css.map */

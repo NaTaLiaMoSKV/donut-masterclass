@@ -1,16 +1,12 @@
 <section id="contact" class="contact">
     <div class="container contact__container">
-        <h2 class="section-title">Contact</h2>
+        <h2 class="section-title contact__title">Contact</h2>
         <p class="section-text">We will answer any question</p>
         <form class="contact-form">
-            <label class="contact-form__label">
-                    <input class="contact-form__input" type="email" name="email" placeholder="Email" required />
-            </label>
-            <label class="contact-form__label">
-                    <input type="text" class="contact-form__input" name="question" pattern="[a-zA-Zа-яА-яІіЇї]+" placeholder="Type your question"
+            <input class="contact-form__input" type="email" name="email" placeholder="Email" required />
+            <input type="text" class="contact-form__input" name="question" pattern="[a-zA-Zа-яА-яІіЇї]+" placeholder="Type your question"
                         minlength="5" maxlength="50" required />
-            </label>
-            <button type="button" class="registration-button">Send</button>
+            <button type="submit" class="registration-button">Send</button>
         </form>
     </div>
 </section>
