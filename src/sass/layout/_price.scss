@@ -1,0 +1,160 @@
+.price {
+    margin-bottom: 19px;
+}
+
+.price__title {
+    margin-bottom: 28px;
+}
+
+.price__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.price-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    padding: 20px 18px 20px 8px;
+    background: var(--price-card-bg-color);
+    box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
+    border-radius: 25px;
+    border: none;
+    transition: border 250ms var(--timing-function);
+
+    &:hover {
+        border: 1px solid var(--content-pink-color);
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.price-card__type {
+    text-align: center;
+    width: 212px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat Alternates';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.price-card__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    &::before {
+        content: url('../images/ico.png');
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+    }
+
+    &:last-child {
+        margin-bottom: 30px;
+    }
+}
+
+.price-card__picture {
+    position: absolute;
+    bottom: 95px;
+}
+
+@media screen and (max-width:767px) {
+
+    .price-card__picture--first{
+        display: none;
+    }
+    
+}
+
+
+@media screen and (min-width:768px) {
+
+    .price {
+        margin-bottom: 80px;
+    }
+    
+    .price__list {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .price-card {
+        width: 225px;
+        height: 580px;
+        padding-right: 8px;
+    }
+
+    .price-card__type {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .price-card__item {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .price-card button {
+        margin-bottom: 0;
+    }
+
+    .price-card button {
+        position: absolute;
+        bottom: 20px;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+
+    .price {
+        margin-bottom: 100px;
+    }
+
+    .price__list {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .price-card {
+        position: relative;
+        width: 375px;
+        height: 610px;
+        padding: 28px 5px 40px 10px;
+    }
+
+    .price-card__type {
+        width: 250px;
+        margin-bottom: 40px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .price-card__item {
+        margin-bottom: 16px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .price-card button {
+        margin-bottom: 0;
+    }
+
+    .price-card button {
+        position: absolute;
+        bottom: 40px;
+    }
+
+}
