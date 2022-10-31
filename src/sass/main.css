@@ -766,7 +766,7 @@ a:hover, a:focus {
   }
 }
 .price {
-  margin-bottom: 19px;
+  margin-bottom: 40px;
 }
 
 .price__title {
@@ -897,5 +897,128 @@ a:hover, a:focus {
   .price-card button {
     position: absolute;
     bottom: 40px;
+  }
+}
+.reviews {
+  margin-bottom: 40px;
+}
+
+.reviews__title {
+  margin-bottom: 28px;
+}
+
+.reviews__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews__picture img {
+  border-radius: 50%;
+}
+
+.reviews__stars {
+  display: flex;
+  justify-content: space-between;
+  width: 136px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.reviews__name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 8px;
+}
+
+.reviews__comment {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.reviews___pagination {
+  text-align: center;
+  position: relative;
+  margin: 32px auto 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+.reviews___pagination::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  width: 35px;
+  transform: translateX(calc(-50% - 47px));
+  border-bottom: 2px solid var(--content-pink-color);
+}
+.reviews___pagination::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  width: 35px;
+  transform: translateX(calc(-50% + 47px));
+  border-bottom: 2px solid var(--content-pink-color);
+}
+
+@media screen and (max-width: 767px) {
+  .reviews__item--small-photo {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .reviews {
+    margin-bottom: 80px;
+  }
+  .reviews__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .reviews__item--big-photo {
+    margin-top: 75px;
+  }
+  .reviews__picture--small-photo {
+    width: 152px;
+  }
+  .reviews__name {
+    margin-bottom: 27px;
+  }
+  .reviews__comment {
+    width: 704px;
+  }
+  .reviews___pagination {
+    margin-top: 22px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .reviews {
+    margin-bottom: 100px;
+  }
+  .reviews__picture--small-photo {
+    width: 288px;
+  }
+  .reviews__picture--big-photo {
+    width: 394px;
+  }
+  .reviews__comment {
+    width: 950px;
+    font-size: 18px;
+    line-height: 22px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .reviews__name {
+    margin-bottom: 27px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .reviews___pagination {
+    font-size: 16px;
+    line-height: 20px;
   }
 }/*# sourceMappingURL=main.css.map */
