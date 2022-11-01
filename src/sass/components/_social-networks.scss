@@ -3,3 +3,24 @@
     justify-content: space-between;
     width: 80px;
 }
+
+.social-networks__svg {
+    fill: var(--content-black-color);
+    transition: fill 250ms var(--timing-function);
+
+    
+}
+
+.social-networks__link {
+
+    & .social-networks__svg {
+        fill: var(--content-black-color);
+        transition: fill 250ms var(--timing-function);
+    }
+
+    &:hover .social-networks__svg,
+    &:focus .social-networks__svg {
+        fill: var(--content-pink-color);
+    }
+    
+}

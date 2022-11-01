@@ -155,14 +155,7 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
     .nav-menu__item {
         margin-right: 20px;
 
-        &:hover .nav-menu__link,
-        &:focus .nav-menu__link{
-            color: var(--white-links-color);
-            background: linear-gradient(180deg, rgba(248, 110, 103, 0.63) 0%, rgba(253, 86, 143, 0.86) 100%);
-            box-shadow: 0px 7px 27px -2px rgba(253, 88, 140, 0.35);
-            border-radius: 0px;
-
-        }
+        
     }
 
     .nav-menu__link {
@@ -172,8 +165,19 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
+        box-shadow: none;
+        background-image: none;
         color: var(--content-black-color);
-        transition: color 250ms var(--timing-function);
+        
+        transition: color 750ms var(--timing-function),
+        box-shadow 750ms var(--timing-function);
+
+        &:hover,
+        &:focus {
+            color: var(--white-links-color);
+            background-image: linear-gradient(180deg, rgba(248, 110, 103, 0.63) 0%, rgba(253, 86, 143, 0.86) 100%);
+            box-shadow: 0px 7px 27px -2px rgba(253, 88, 140, 0.35);
+        }
     }
 
     .mobile-menu__button {

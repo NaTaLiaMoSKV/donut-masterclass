@@ -8,6 +8,9 @@ body {
   color: var(--content-black-color);
   background-image: linear-gradient(180.11deg, var(--bg-white-color1) 10.73%, var(--bg-white-color2) 38.02%, var(--bg-white-color1) 71.11%, var(--bg-white-color2) 99.91%);
 }
+body.open-mobile-menu {
+  overflow: hidden;
+}
 
 h2,
 h3,
@@ -70,16 +73,44 @@ a:hover, a:focus {
   width: 80px;
 }
 
+.social-networks__svg {
+  fill: var(--content-black-color);
+  transition: fill 250ms var(--timing-function);
+}
+
+.social-networks__link .social-networks__svg {
+  fill: var(--content-black-color);
+  transition: fill 250ms var(--timing-function);
+}
+.social-networks__link:hover .social-networks__svg, .social-networks__link:focus .social-networks__svg {
+  fill: var(--content-pink-color);
+}
+
 .registration-button {
+  display: block;
   width: 145px;
   height: 40px;
+  text-align: center;
+  padding: 9px;
   border: none;
+  box-shadow: none;
   border-radius: 30px;
   font-weight: 400;
   font-size: 18px;
   color: var(--white-color);
   background-color: var(--content-pink-color);
   filter: drop-shadow(10px 15px 25px rgba(232, 183, 183, 0.45));
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), border 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+}
+.registration-button:hover {
+  background-color: var(--white-color);
+  color: var(--content-pink-color);
+  border: 1px solid var(--content-pink-color);
+}
+.registration-button:focus {
+  color: var(--white-color);
+  background-color: var(--content-pink-color);
+  box-shadow: inset 0px 4px 4px rgba(107, 66, 66, 0.25);
 }
 
 .registration-button a {
@@ -286,12 +317,6 @@ a:hover, a:focus {
   .nav-menu__item {
     margin-right: 20px;
   }
-  .nav-menu__item:hover .nav-menu__link, .nav-menu__item:focus .nav-menu__link {
-    color: var(--white-links-color);
-    background: linear-gradient(180deg, rgba(248, 110, 103, 0.63) 0%, rgba(253, 86, 143, 0.86) 100%);
-    box-shadow: 0px 7px 27px -2px rgba(253, 88, 140, 0.35);
-    border-radius: 0px;
-  }
   .nav-menu__link {
     display: block;
     margin-top: 25px;
@@ -299,8 +324,15 @@ a:hover, a:focus {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
+    box-shadow: none;
+    background-image: none;
     color: var(--content-black-color);
-    transition: color 250ms var(--timing-function);
+    transition: color 750ms var(--timing-function), box-shadow 750ms var(--timing-function);
+  }
+  .nav-menu__link:hover, .nav-menu__link:focus {
+    color: var(--white-links-color);
+    background-image: linear-gradient(180deg, rgba(248, 110, 103, 0.63) 0%, rgba(253, 86, 143, 0.86) 100%);
+    box-shadow: 0px 7px 27px -2px rgba(253, 88, 140, 0.35);
   }
   .mobile-menu__button {
     display: none;
@@ -863,10 +895,10 @@ a:hover, a:focus {
     font-size: 16px;
     line-height: 20px;
   }
-  .price-card button {
+  .price-card a {
     margin-bottom: 0;
   }
-  .price-card button {
+  .price-card a {
     position: absolute;
     bottom: 20px;
   }
@@ -896,10 +928,10 @@ a:hover, a:focus {
     font-size: 18px;
     line-height: 22px;
   }
-  .price-card button {
+  .price-card a {
     margin-bottom: 0;
   }
-  .price-card button {
+  .price-card a {
     position: absolute;
     bottom: 40px;
   }
@@ -1131,12 +1163,19 @@ a:hover, a:focus {
   .registration {
     margin-bottom: 68px;
   }
+  .registration__container {
+    background-image: url("../images/registration-donuts-img2-tablet.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 100% 100%;
+    bottom: 0;
+  }
   .registration__bloc {
     height: 246px;
     position: relative;
     display: flex;
     align-items: center;
-    background-image: url("../images/registration-rect-tablet.png"), url("../images/registration-donuts-img2-tablet.png");
+    background-image: url("../images/registration-rect-tablet.png"), linear-gradient(359deg, rgba(61, 44, 44, 0.3) 0%, rgba(61, 44, 44, 0.3) 100%);
     border-radius: 10px;
     box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
     background-repeat: no-repeat;
@@ -1218,8 +1257,11 @@ a:hover, a:focus {
   .registration {
     margin-bottom: 125px;
   }
+  .registration__container {
+    background-image: url("../images/registration-donuts-img2-desktop.png");
+  }
   .registration__bloc {
-    background-image: url("../images/registration-rect-desktop.png"), url("../images/registration-donuts-img2-desktop.png");
+    background-image: url("../images/registration-rect-desktop.png"), linear-gradient(359deg, rgba(61, 44, 44, 0.3) 0%, rgba(61, 44, 44, 0.3) 100%);
   }
   .registration__picture img {
     position: absolute;
@@ -1358,8 +1400,30 @@ a:hover, a:focus {
   line-height: 20px;
 }
 
-.footer__tel-link {
+.footer__phone,
+.footer__location {
+  transition: color 250ms var(--timing-function);
+}
+.footer__phone:hover .footer__link, .footer__phone:focus .footer__link,
+.footer__location:hover .footer__link,
+.footer__location:focus .footer__link {
+  color: var(--content-pink-color);
+}
+.footer__phone:hover .footer__icon use, .footer__phone:focus .footer__icon use,
+.footer__location:hover .footer__icon use,
+.footer__location:focus .footer__icon use {
+  fill: var(--content-pink-color);
+}
+
+.footer__link {
+  margin-right: 5px;
   color: var(--content-black-color);
+  transition: color 250ms var(--timing-function);
+}
+
+.footer__icon use {
+  fill: var(--content-black-color);
+  transition: fill 250ms var(--timing-function);
 }
 
 .footer__picture img {

@@ -16,8 +16,30 @@
     line-height: 20px;
 }
 
-.footer__tel-link {
+.footer__phone,
+.footer__location {
+    transition: color 250ms var(--timing-function);
+
+    &:hover .footer__link,
+    &:focus .footer__link {
+        color: var(--content-pink-color);
+    }
+
+    &:hover .footer__icon use,
+    &:focus .footer__icon use {
+        fill: var(--content-pink-color);
+    }
+}
+
+.footer__link {
+    margin-right: 5px;
     color: var(--content-black-color);
+    transition: color 250ms var(--timing-function);
+}
+
+.footer__icon use {
+    fill: var(--content-black-color);
+    transition: fill 250ms var(--timing-function);
 }
 
 .footer__picture img {

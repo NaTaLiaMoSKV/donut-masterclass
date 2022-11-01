@@ -100,6 +100,14 @@
     .registration {
         margin-bottom: 68px;
     }
+
+    .registration__container {
+        background-image: url("../images/registration-donuts-img2-tablet.png");
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: 100% 100%;
+        bottom: 0;
+    }
     
     .registration__bloc {
         height: 246px;
@@ -107,7 +115,7 @@
         display: flex;
         align-items: center;
         background-image: url("../images/registration-rect-tablet.png"),
-        url("../images/registration-donuts-img2-tablet.png");
+            linear-gradient(359deg, rgba(61, 44, 44, 0.3) 0%, rgba(61, 44, 44, 0.3) 100%);
         border-radius: 10px;
         box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
         background-repeat: no-repeat;
@@ -193,9 +201,13 @@
         margin-bottom: 125px;
     }
 
+    .registration__container {
+        background-image: url("../images/registration-donuts-img2-desktop.png");
+    }
+
     .registration__bloc {
         background-image: url("../images/registration-rect-desktop.png"),
-            url("../images/registration-donuts-img2-desktop.png");
+            linear-gradient(359deg, rgba(61, 44, 44, 0.3) 0%, rgba(61, 44, 44, 0.3) 100%);
     }
 
     .registration__picture img {
