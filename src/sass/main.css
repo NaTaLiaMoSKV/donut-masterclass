@@ -153,12 +153,28 @@ a:hover, a:focus {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
+  margin-top: 10px;
   color: var(--content-black-color);
   margin-right: auto;
 }
 
-.read-more-link--close {
+.read-more-link--open {
+  display: block;
+}
+
+.read-more-link--close,
+.section-text--hidden {
   display: none;
+}
+
+.section-text--hidden.is-open {
+  display: block;
+}
+.section-text--hidden.is-open ~ .read-more-link--open {
+  display: none;
+}
+.section-text--hidden.is-open ~ .read-more-link--close {
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
@@ -170,6 +186,43 @@ a:hover, a:focus {
 @media screen and (min-width: 1200px) {
   .read-more-link {
     display: none;
+  }
+  .section-text--hidden {
+    display: block;
+  }
+}
+.btn-up {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  border: 10px solid transparent;
+  cursor: pointer;
+  background-image: url("../images/arrow-up.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+  transition: border 250ms var(--timing-function);
+}
+.btn-up:hover, .btn-up:focus {
+  border: 8px solid transparent;
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-up {
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    border: 15px solid transparent;
+  }
+  .btn-up:hover, .btn-up:focus {
+    border: 12px solid transparent;
   }
 }
 :root {
@@ -826,7 +879,7 @@ a:hover, a:focus {
   background: var(--price-card-bg-color);
   box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
   border-radius: 25px;
-  border: none;
+  border: 1px solid transparent;
   transition: border 250ms var(--timing-function);
 }
 .price-card:hover {
@@ -1229,16 +1282,16 @@ a:hover, a:focus {
     width: 237px;
     margin-top: 16px;
     border-bottom: 1px solid var(--black-color);
-    color: var(--black-color);
+    color: var(--contact-input-gray-color);
   }
   .registration-form__input::-moz-placeholder {
-    color: var(--black-color);
+    color: var(--contact-input-gray-color);
   }
   .registration-form__input:-ms-input-placeholder {
-    color: var(--black-color);
+    color: var(--contact-input-gray-color);
   }
   .registration-form__input::placeholder {
-    color: var(--black-color);
+    color: var(--contact-input-gray-color);
   }
   .registration-form__input:-moz-placeholder-shown:required {
     border-color: var(--black-color);
@@ -1345,16 +1398,16 @@ a:hover, a:focus {
   color: var(--contact-input-gray-color);
 }
 .contact-form__input:-moz-placeholder-shown:required {
-  border-color: var(--contact-input-gray-color);
+  border-color: var(--black-color);
 }
 .contact-form__input:-ms-input-placeholder:required {
-  border-color: var(--contact-input-gray-color);
+  border-color: var(--black-color);
 }
 .contact-form__input:placeholder-shown:required {
-  border-color: var(--contact-input-gray-color);
+  border-color: var(--black-color);
 }
 .contact-form__input:valid {
-  border-color: var(--contact-input-gray-color);
+  border-color: var(--black-color);
 }
 .contact-form__input:invalid {
   border-color: red;

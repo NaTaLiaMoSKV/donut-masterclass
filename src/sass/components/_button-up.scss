@@ -1,0 +1,38 @@
+.btn-up {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    border: 10px solid transparent;
+    cursor: pointer;
+    background-image: url("../images/arrow-up.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 100;
+    transition: border 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        border: 8px solid transparent;
+    }
+}
+
+.btn-up_hide {
+    display: none;
+}
+
+@media screen and(min-width:768px) {
+
+    .btn-up {
+        right: 20px;
+        bottom: 20px;
+        width: 60px;
+        height: 60px;
+        border: 15px solid transparent;
+        &:hover,
+        &:focus {
+            border: 12px solid transparent;
+        }
+    }
+}

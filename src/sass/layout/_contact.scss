@@ -33,11 +33,11 @@
     }
 
     &:placeholder-shown:required {
-        border-color: var(--contact-input-gray-color);
+        border-color: var(--black-color);
     }
 
     &:valid {
-        border-color: var(--contact-input-gray-color);
+        border-color: var(--black-color);
     }
 
     &:invalid {

@@ -177,10 +177,10 @@
         width: 237px;
         margin-top: 16px;
         border-bottom: 1px solid var(--black-color);
-        color: var(--black-color);
+        color: var(--contact-input-gray-color);
         
         &::placeholder {
-            color: var(--black-color);
+            color: var(--contact-input-gray-color);
         }
     
         &:placeholder-shown:required {
@@ -190,9 +190,7 @@
         &:valid {
             border-color: var(--black-color);
         }
-    
     }
-
 }
 
 @media screen and (min-width:1200px) {
